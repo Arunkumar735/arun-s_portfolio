@@ -1,0 +1,383 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>THANOS gaming Site</title>
+<!---custom css link--->
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<!---boxicons link--->
+<link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+<!---remixicons link--->
+<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+	
+<!---google fonts link--->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Goblin+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+  *{
+padding:0;
+margin:0;
+box-sizing:border-box;
+font-family: "Bangers", system-ui;
+list-style:none;
+text-decoration:none;
+}
+header{
+	position:fixed;
+	right:0;
+	top:0;
+	z-index:1000;
+	width:100%;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	padding:33px 9%;
+	background:transparent;
+}
+.logo{
+	font-size: 30px;
+	font-weight: 400;
+	color:white;
+}
+.navlist{
+	display:flex;
+}
+.navlist a{
+	color:white;
+	margin-left:60px;
+	font-size: 20px;
+	font-weight: 400;
+	border-bottom: 2px solid transparent;
+	transition:all.55s ease;
+}
+.navlist a:hover{
+	border-bottom: 5px solid red;
+	transform: translateY(9px);
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color:transparent;
+  }
+  
+  li {
+	float:right;
+  }
+  
+  li a, .dropbtn {
+	display:block;
+	color: white;
+	text-align: center;
+	padding:10px;
+	text-decoration: none;
+  }
+  
+  li a:hover, .dropdown:hover .dropbtn {
+	background-color: red;
+  }
+  
+  li.dropdown {
+	display: inline-block;
+  }
+  
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color:transparent;
+	min-width: 10;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  .dropdown-content a {
+	color:azure;
+	padding: 10x 10px;
+	text-decoration: none;
+	display: block;
+	text-align:center;
+  }
+  
+  .dropdown-content a:hover {background-color:red}
+  
+  .dropdown:hover .dropdown-content {
+	display: block;
+  }
+
+#menu-icon{
+	color:white;
+	font-size: 35px;
+	z-index: 10001;
+	curser:pointer;
+	display: none;
+}
+.hero{
+	height: 100%;
+	width: 100%;
+	min-height: 100vh;
+	background-image:url("wp9343505-marvel-8k-wallpapers.jpg");
+	background-repeat: no-repeat;
+	background-size:2000px 1250px;
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	align-items: center;
+	gap:2rem;
+}
+section{
+	padding:0 19%;
+}
+.hero-text h5{
+	font-size:14px;
+	font-weight: 400;
+	color:white;
+	margin-bottom: 40px;
+}
+.hero-text h1{
+	font-family: "Bangers", system-ui;
+	font-size: 90px;
+	line-height: 1;
+	color: white;
+	margin:0 0 45px;
+}
+.hero-text h2{
+	font-size: 18px;
+	font-weight: 10;
+	color: white;
+	margin-bottom: 10px;
+}
+.hero-text p{
+	color: white;
+	font-size: 15px;
+	line-height: 1.9;
+	margin-bottom: 40px;
+}
+.hero-img img{
+	width:500px;
+	height: auto;
+}
+
+.hero-text a{
+	display: inline-block;
+	color: white;
+	background:red;
+	border:1px solid transparent;
+	padding: 12px 30px;
+	line-height: 1.5;
+	font-size: 25px;
+	font-weight:5;
+	border-radius: 30px;
+	text-transform: uppercase;
+	transition: all .55s ease;
+}
+.hero-text a:hover{
+	background: transparent;
+	border:1px solid white;
+	transform: translateX(8px);
+}
+.hero-text a.ctaa{
+	background: transparent;
+	border: 1px solid white;
+	margin-left: 20px;
+}
+.hero-text a.ctaa i{
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.icons{
+	position: absolute;
+	top: 50%;
+	padding: 0 9%;
+	transform: translateY(-50%);
+}
+.icons i{
+	display: block;
+	margin: 26px 0;
+	font-size: 24px;
+	color: white;
+	transition: all.50s ease;
+}
+.icons i:hover{
+	color:red;
+	transform: translateY(-5px);
+}
+.scroll-down{
+	position: absolute;
+	bottom: 6%;
+	right: 9%;
+}
+.scroll-down i{
+	display:block;
+	padding: 12px;
+	font-size: 25px;
+	color: white;
+	background: red;
+	border-radius:30px;
+	transition: all.50s ease;
+}
+.scroll-down i:hover{
+	transform: translateY(-5px);
+}
+@media(max-width:1535px){
+	header{
+		padding: 15px 3%;
+		transition: .2s;
+	}
+	.icons{
+		padding: 0 3%;
+		transition: .2s;
+	}
+	.scroll-down{
+		right: 3%;
+		transition: .2s;
+	}
+}
+@media (max-width:1460px){
+	section{
+		padding: 0 12%;
+		transition: .2s;
+	}
+}
+@media (max-width:1340px){
+	.hero-img img{
+		width:100%;
+		height: auto;
+}
+.hero-text h1{
+	font-size: 75px;
+	margin: 0 0 30px;
+   }
+   .hero-text h5{
+	margin-bottom: 25px;
+   }
+}
+@media (max-width:1195px){
+	section{
+		padding: 0 3%;
+		transition: .2s;
+	}
+	.hero-text{
+		padding-top: 115px;
+	}
+	.hero-img{
+		text-align: center;
+	}
+	.hero-img img{
+		width:560px;
+		height: auto;
+	}
+	.hero{
+		height: 100%;
+		gap:1rem;
+		grid-template-columns: 1fr;
+	}
+	.icons{
+		display: none;
+	}
+	.scroll-down{
+		display: none;
+	}
+}
+@media (max-width:990px){
+	#menu-icon{
+display: block;
+	}
+	.navlist{
+		position: absolute;
+		top: 100%;
+		right:-100%;
+		width: 300px;
+		height: 40vh;
+		background:#4d9559;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding: 50px 20px;
+		transition: all.50s ease;
+	}
+	.navlist a{
+		margin-left: 0;
+		display: block;
+		margin: 10px 0;
+	}
+	.navlist.open{
+		right: 0;	
+	}
+}
+@media (max-width:680px){
+	.hero-img img{
+		width:100%;
+		height: auto;
+	}
+}
+</style>
+</head>
+<body>
+<header>
+<a href	="#" class ="logo">THANOS SQUAD</a>
+<ul class="navlist">
+  <li><a href ="#">Home</a></li>
+  <li><a href ="#">about</a></li>
+  <li><a href ="#">Tiers</a></li>
+  <li><a href ="#">Kill ratio</a></li>
+  <li><a href ="#">Missions</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Players</a>
+    <div class="dropdown-content">
+      <a href="#">THANOS</a>
+<a href="#">KAKASHI</a>
+<a href="#">ROSEMILK</a>
+<a href="#">LIZO M</a>
+<a href="#">KOLARU</a>
+<a href="#">RASCAL N</a>
+<a href="#">DP DINESH</a>
+<a href="#">KAIPULLA</a>
+<a href="#">RYZEN</a>
+    </div>
+  </li>
+</ul>
+<div class ="bx bx-menu" id="menu-icon"></div>
+</header>  
+<section class="hero">
+  <div class ="hero-text">
+  <h5>Rush Players</h5>
+  <h2>TEAM</h2>
+  <h1>DEATH DEALERS</h1>
+  <p>Every age has its storytelling form, and video gaming is a huge part of our culture....<br>
+    Some people say video games rot your brain, but I think they work different muscles that maybe you don't normally use. ...<br>
+    Video games are meant to be just one thing: Fun!</p>
+  <a href="#">THANOS</a>
+  <a href="#"class="ctaa"><i class="ri-play-fill"></i>Enter The new world</a>
+  </div>
+  <div class="hero-img">
+    <img src ="TEAM DEATHS.png">
+  </div>
+</section>
+<div class="icons">
+  <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="ri-instagram-line"></i></a>
+  <a href="https://www.youtube.com"><i class="ri-youtube-line"></i></a>
+  <a href="https://x.com/i/flow/login/"><i class="ri-twitter-line"></i></a>
+  <a href="https://www.facebook.com/login/"><i class="ri-facebook-box-line"></i></a>
+  <a href="https://www.google.co.in/"><i class="ri-google-fill"></i></a>
+</div>
+<div class="scroll-down">
+  <a href="#"><i class="ri-arrow-down-s-fill"></i></a>
+
+   <!----scroll reveal effect-->
+   <script src="https://unpkg.com/scrollreveal"></script>
+
+
+  <!----custom js link-->
+  <script src ="script.js"></script>
+</div>
+</body>
+</html>
